@@ -1,0 +1,10 @@
+%nav#topbar.navbar.navbar-expand-md.navbar-light.d-none.d-md-flex
+  .container-fluid
+    %ul.navbar-nav.me-lg-auto
+    .navbar-user
+      .dropdown
+        .header-pretitle
+          %a.avatar.avatar-sm.avatar-online.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-bs-toggle" => "dropdown", href: "#", role: "button"}
+            %img.avatar-img.rounded-circle{:alt => "...", :src => "/images/admin.png"}
+          .dropdown-menu.dropdown-menu-end
+            = link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item"

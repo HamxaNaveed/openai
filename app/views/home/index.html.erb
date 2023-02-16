@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="card_image text-center hero-img">
+    <img src="https://media.giphy.com/media/LwIyvaNcnzsD6/giphy.gif" />
+  </div>
+  <h1 class="text-center mt-2">Chat</h1>
+  <!-- <%= @conversation.each do |con|%>
+    <div>
+      <%= con.question %>
+    </div>
+    <div>
+      <%= con.answer %>
+    </div>
+    <% end %> -->
+      <div id="completion" class="output-field typing-animation"></div>
+      <%= form_tag('/home/generate_completion', method: 'post' , remote: true) do %>
+        <div class="input-group">
+          <%= text_field_tag(:prompt, nil, id: 'prompt' , class: 'form-control' ,
+            placeholder: "Enter your prompt here..." , required: true) %>
+            <div class="input-group-append">
+              <%= button_tag("Submit", id: "submit-btn" , class: "btn btn-primary" ) do %>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <% end %>
+            </div>
+        </div>
+        <% end %>
+</div>

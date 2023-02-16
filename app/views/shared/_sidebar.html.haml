@@ -1,0 +1,25 @@
+%nav#sidebar.navbar.navbar-vertical.fixed-start.navbar-expand-md.navbar-light
+  .container-fluid
+    / Toggler
+    %button.navbar-toggler{"aria-controls" => "sidebarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#sidebarCollapse", "data-bs-toggle" => "collapse", type: "button"}
+      %span.navbar-toggler-icon
+    / Brand
+    %a.navbar-brand{:href => root_path}
+      %img.navbar-brand-img.mx-auto{:alt => "Logo Here", :src => "/images/logo.svg", :class => "lift"}/
+    / User (xs)
+    .navbar-user.d-md-none
+      / Dropdown
+      .dropdown
+        / Toggle
+        %a#sidebarIcon.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-bs-toggle" => "dropdown", href: "#", role: "button"}
+          .avatar.avatar-sm.avatar-online
+            %img.avatar-img.rounded-circle{:alt => "...", :src => "/images/admin.png"}
+        / Menu
+        .dropdown-menu.dropdown-menu-end{"aria-labelledby" => "sidebarIcon"}
+          = link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item"
+    / Collapse
+    #sidebarCollapse.collapse.navbar-collapse
+      / Navigation
+      %ul.navbar-nav
+        %li.nav-item
+          

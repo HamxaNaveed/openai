@@ -1,0 +1,36 @@
+body {
+  background-color: #f8f8f8;
+}
+
+.container-chat {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: #fff;
+}
+
+.input-field {
+  display: block;
+  margin-bottom: 2em;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.2em;
+  padding: 0.5em;
+  outline: none;
+  margin-top: auto;
+}
+
+.output-field {
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.2em;
+  margin-top: auto;
+}
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
